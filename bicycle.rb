@@ -15,6 +15,7 @@ class Gear
     ratio * wheel.diameter
   end
 
+  # QUESTION - rim and tire act like getters and setters.. but they don't create instance variables on the object - or at least the obj looks like it has local variables attached. What is this?
   Wheel = Struct.new(:rim, :tire) do
     def diameter
       rim + (tire * 2)
